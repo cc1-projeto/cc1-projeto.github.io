@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Projeto CC1 N2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon"/>
+    <link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background: #268f3a">
+
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Projeto CC1 N2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="users.html">Usuários</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <button id="btnInstall" aria-label="Install" hidden></button>
+    <div class="row">
+
+        <div class="col-sm-6 col-md-4 pt-4 rounded ">
+            <div class="col-md-12 p-4 rounded"
+                 style="border: 1px solid rgba(59,220,89,0.2); box-shadow: 6px 6px rgba(59,220,89,.2) ;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="img-fluid rounded rounded-circle"
+                             style="border: 1px solid rgba(59,220,89,0.3); box-shadow: 3px 4px rgba(59,220,89,0.2) ; "
+                             src="images/avatar.png" alt="Imagem do usuario">
+                    </div>
+                </div>
+
+
+                <div class="row pt-3">
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table" style="font-size: 12px">
+                                <tr>
+                                    <td>RA:</td>
+                                    <td>12345</td>
+                                </tr>
+                                <tr>
+                                    <td>Nome:</td>
+                                    <td>Kulas Light</td>
+                                </tr>
+                                <tr>
+                                    <td>Curso:</td>
+                                    <td>KLight</td>
+                                </tr>
+                                <tr>
+                                    <td>Semestre:</td>
+                                    <td>Sincere@april.biz</td>
+                                </tr>
+                                <tr>
+                                    <td>Disciplina:</td>
+                                    <td>Sincere@april.biz</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Professor:</td>
+                                    <td>Sincere@april.biz</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-8 pt-4 rounded ">
+            <div class="col-md-12 p-4 rounded"
+                 style="border: 1px solid rgba(59,220,89,0.2); box-shadow: 6px 6px rgba(59,220,89,.2) ;">
+                <h1>Titulo do trabaljp</h1>
+                <hr>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aliquam atque culpa cupiditate
+                    dolore exercitationem ipsa ipsum libero nisi possimus provident quaerat ratione, rerum sequi
+                    similique suscipit veniam voluptate.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="scripts/install.js"></script>
+
+<script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js')
+                .then((reg) => {
+                    console.log('Service worker registered.', reg);
+                });
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Projeto CC1 N2 - Users</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/users.js"></script>
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background: #268f3a">
+
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Projeto CC1 N2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="users.html">Usuários</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container pb-5">
+    <div id="users" class="row">
+
+        <div id="paginaDados" class=""></div>
+
+
+        <div id="user-template" class="col-sm-6 col-md-4 pt-4 rounded d-none">
+            <div class="col-md-12 p-4 rounded"
+                 style="border: 1px solid rgba(59,220,89,0.2); box-shadow: 6px 6px rgba(59,220,89,.2) ;">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 text-center">
+                        <img class="img-fluid rounded rounded-circle"
+                             style="border: 1px solid rgba(59,220,89,0.3); box-shadow: 3px 4px rgba(59,220,89,0.2) ; "
+                             src="images/perfil.jpeg" alt="Imagem do usuario">
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 text-right  d-none d-sm-none d-md-block">
+
+                        <div class="pb-2">
+                            <a class="btn btn-link buscarPostsUsuario" data-toggle="tooltip" data-placement="top"
+                               title="Visualizar artigos"
+                               style=" width: 43px; border: 1px solid rgba(59,220,89,0.2); box-shadow: 3px 4px rgba(59,220,89,0.2)">
+                                <i class="fas fa-file-signature" style="color: rgba(59,220,89, 1)"></i>
+                            </a>
+                        </div>
+
+                        <div class="pb-2">
+                            <a class="btn btn-link buscarTodoUsuario" data-toggle="tooltip" data-placement="top"
+                               title="Visualizar tarefas"
+                               style=" width: 43px; border: 1px solid rgba(59,220,89,0.2); box-shadow: 3px 4px rgba(59,220,89,0.2)">
+                                <i class="fas fa-check-double" style="color: rgba(59,220,89, 1)"></i>
+                            </a>
+                        </div>
+
+                        <div class="pb-2">
+                            <a class="btn btn-link detalharUsuario"
+                               data-toggle="tooltip" data-placement="top"
+                               title="Visualizar dados do usuário"
+                               style=" width: 43px; border: 1px solid rgba(59,220,89,0.2); box-shadow: 3px 4px rgba(59,220,89,0.2)">
+                                <i class="fas fa-user-alt" style="color: rgba(59,220,89, 1)"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row text-center pt-3 d-flex d-sm-flex d-md-none justify-content-center">
+                    <a class="col-xs-12 p-1 d-block buscarPostsUsuario"
+                       style="width: calc(70% / 3); border: 1px solid rgba(59,220,89,0.2); box-shadow: 3px 4px rgba(59,220,89,0.2)">
+                        <i class="fas fa-file-signature" style="color: rgba(59,220,89, 1)"></i>
+                    </a>
+                    <a class="col-xs-12 p-1 d-block buscarTodoUsuario"
+                       style="width: calc(70% / 3); border: 1px solid rgba(59,220,89,0.2); box-shadow: 3px 4px rgba(59,220,89,0.2)">
+                        <i class="fas fa-check-double" style="color: rgba(59,220,89, 1)"></i>
+                    </a>
+                    <a class="col-xs-12 p-1 d-block detalharUsuario"
+                       style="width: calc(70% / 3); border: 1px solid rgba(59,220,89,0.2); box-shadow: 3px 4px rgba(59,220,89,0.2)">
+                        <i class="fas fa-user-alt" style="color: rgba(59,220,89, 1)"></i>
+                    </a>
+                </div>
+
+
+                <div class="row pt-3">
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table" style="font-size: 12px">
+                                <tr>
+                                    <td>ID:</td>
+                                    <td class="id"></td>
+                                </tr>
+                                <tr>
+                                    <td>Name:</td>
+                                    <td class="name"></td>
+                                </tr>
+                                <tr>
+                                    <td>Username:</td>
+                                    <td class="username"></td>
+                                </tr>
+                                <tr>
+                                    <td>E-mail:</td>
+                                    <td class="email"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
